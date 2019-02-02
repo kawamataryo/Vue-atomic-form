@@ -34,7 +34,7 @@
         name="sample-select"
         :options="options"
       ></MySelect>
-      <MyBtn>send</MyBtn>
+      <MyBtn @click="sendForm">send</MyBtn>
     </form>
   </div>
 </template>
@@ -83,6 +83,11 @@ export default {
         }
       ]
     };
+  },
+  methods: {
+    sendForm() {
+      // formデータの送信処理
+    }
   }
 };
 </script>
