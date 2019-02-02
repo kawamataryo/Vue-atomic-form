@@ -1,18 +1,18 @@
 <template>
   <div id="app">
     <form action="">
-      <MyInput v-model="sampleForm.text" label="テキストエリア"></MyInput>
+      <MyInputText v-model="sampleForm.text" label="テキスト"></MyInputText>
     </form>
   </div>
 </template>
 
 <script>
-import MyInput from "@/components/MyInput";
+import MyInputText from "@/components/MyInputText";
 
 export default {
   name: "app",
   components: {
-    MyInput
+    MyInputText
   },
   data() {
     return {
