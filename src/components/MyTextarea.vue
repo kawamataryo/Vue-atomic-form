@@ -1,24 +1,27 @@
 <template>
-  <label>
-    {{ label }}
-    <input
-      type="text"
+  <fieldset>
+    <legend>{{ legend }}</legend>
+    <textarea
       :name="name"
       :value="value"
       :placeholder="placeholder"
+      :rows="rows"
+      :cols="cols"
       @input="updateValue"
-    />
-  </label>
+    ></textarea>
+  </fieldset>
 </template>
 
 <script>
 export default {
-  name: "MyInput",
+  name: "MyTextarea",
   props: {
     value: { type: String, require: true },
     name: { type: String, require: true },
-    label: { type: String, require: true },
-    placeholder: { type: String, require: false }
+    legend: { type: String, require: true },
+    placeholder: { type: String, require: false },
+    rows: { type: Number, require: false },
+    cols: { type: Number, require: false }
   },
   methods: {
     updateValue: function(e) {
@@ -28,6 +31,4 @@ export default {
 };
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
