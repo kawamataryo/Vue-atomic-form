@@ -1,6 +1,5 @@
 <template>
   <fieldset>
-    <legend>{{ legend }}</legend>
     <template v-for="(option, index) in options">
       <label :key="index">
         <input
@@ -20,8 +19,7 @@ export default {
   props: {
     value: { type: String, require: true },
     options: { type: Array, require: true },
-    name: { type: String, require: true },
-    legend: { type: String, require: true }
+    name: { type: String, require: true }
   },
   methods: {
     updateValue: function(e) {

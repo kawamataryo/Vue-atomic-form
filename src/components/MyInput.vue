@@ -1,14 +1,11 @@
 <template>
-  <fieldset>
-    <legend>{{ legend }}</legend>
-    <input
-      :type="type"
-      :name="name"
-      :value="value"
-      :placeholder="placeholder"
-      @input="updateValue"
-    />
-  </fieldset>
+  <input
+    :type="type"
+    :name="name"
+    :value="value"
+    :placeholder="placeholder"
+    @input="updateValue"
+  />
 </template>
 
 <script>
@@ -18,7 +15,6 @@ export default {
     value: { type: String, require: true },
     type: { type: String, require: true },
     name: { type: String, require: true },
-    legend: { type: String, require: true },
     placeholder: { type: String, require: false }
   },
   methods: {

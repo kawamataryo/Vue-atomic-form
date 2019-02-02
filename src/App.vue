@@ -1,39 +1,40 @@
 <template>
   <div id="app">
     <form action="">
+      <MyLabel>InputText</MyLabel>
       <MyInput
         v-model="sampleForm.text"
-        legend="インプトテキスト"
         placeholder="サンプル"
         name="sample-input"
         type="text"
       ></MyInput>
+      <MyLabel>TextArea</MyLabel>
       <MyTextarea
         v-model="sampleForm.textarea"
-        legend="テキストエリア"
         placeholder="サンプル"
         name="sample-textarea"
         :rows="10"
         :cols="50"
       ></MyTextarea>
+      <MyLabel>RadioButton</MyLabel>
       <MyRadio
         v-model="sampleForm.radio"
-        legend="ラジオボタン"
         name="sample-radio"
         :options="options"
       ></MyRadio>
+      <MyLabel>Checkbox</MyLabel>
       <MyCheckbox
         v-model="sampleForm.checkbox"
-        legend="チェックボックス"
         name="sample-checkbox"
         :options="options"
       ></MyCheckbox>
+      <MyLabel>Select</MyLabel>
       <MySelect
         v-model="sampleForm.select"
         name="sample-select"
-        legend="セレクトボックス"
         :options="options"
       ></MySelect>
+      <MyBtn>send</MyBtn>
     </form>
   </div>
 </template>
@@ -44,6 +45,8 @@ import MyTextarea from "./components/MyTextarea";
 import MyRadio from "./components/MyRadio";
 import MyCheckbox from "./components/MyCheckbox";
 import MySelect from "./components/MySelect";
+import MyBtn from "./components/MyBtn";
+import MyLabel from "./components/MyLabel";
 
 export default {
   name: "app",
@@ -52,7 +55,9 @@ export default {
     MyInput,
     MyRadio,
     MyCheckbox,
-    MySelect
+    MySelect,
+    MyBtn,
+    MyLabel
   },
   data() {
     return {

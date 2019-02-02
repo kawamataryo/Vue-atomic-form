@@ -1,6 +1,5 @@
 <template>
   <fieldset>
-    <legend>{{ legend }}</legend>
     <template v-for="(option, index) in options">
       <label :key="index">
         <input
@@ -19,8 +18,7 @@ export default {
   name: "MyCheckbox",
   props: {
     options: { type: Array, require: true },
-    name: { type: String, require: true },
-    legend: { type: String, require: true }
+    name: { type: String, require: true }
   },
   data() {
     return {

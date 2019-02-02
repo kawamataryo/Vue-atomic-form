@@ -1,6 +1,5 @@
 <template>
   <fieldset>
-    <legend>{{ legend }}</legend>
     <select :name="name" @change="updateValue">
       <template v-for="(option, index) in options">
         <option :value="option.value" :key="index">
@@ -17,8 +16,7 @@ export default {
   props: {
     value: { type: String, require: true },
     options: { type: Array, require: true },
-    name: { type: String, require: true },
-    legend: { type: String, require: true }
+    name: { type: String, require: true }
   },
   methods: {
     updateValue: function(e) {
